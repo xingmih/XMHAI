@@ -44,7 +44,7 @@ export const siteConfig: SiteConfig = {
     value: "/assets/images/LiuYingPure3.svg",
     alt: "🍀",
   },
-  navbarTitle: "Firefly", // 导航栏标题，可以设置为与 title 不同的值，如果不设置则使用 title
+  navbarTitle: "home", // 导航栏标题，可以设置为与 title 不同的值，如果不设置则使用 title
 
   
   // 追番配置
@@ -60,7 +60,7 @@ export const siteConfig: SiteConfig = {
 
   // 页面开关配置 - 控制特定页面的访问权限，设为false会返回404
   pages: {
-    anime: true, // 追番页面开关，
+    anime: false, // 追番页面开关，
   },
 
   // 文章列表布局配置
@@ -102,15 +102,11 @@ export const siteConfig: SiteConfig = {
         // 主页显示自定义文本（全局开关）
         enable: true,
         // 主页横幅主标题
-        title: "Lovely firefly!",
+        title: "星觅海",
         // 主页横幅副标题
         subtitle: [
-          "In Reddened Chrysalis, I Once Rest",
-          "From Shattered Sky, I Free Fall",
-          "Amidst Silenced Stars, I Deep Sleep",
-          "Upon Lighted Fyrefly, I Soon Gaze",
-          "From Undreamt Night, I Thence Shine",
-          "In Finalized Morrow, I Full Bloom",
+          "一起慢慢进步.",
+          "Make progress together.",
         ],
         typewriter: {
           enable: true, // 启用副标题打字机效果
@@ -121,7 +117,7 @@ export const siteConfig: SiteConfig = {
       },
       credit: {
         enable: {
-          desktop: true, // 桌面端显示横幅图片来源文本
+          desktop: false, // 桌面端显示横幅图片来源文本
           mobile: false, // 移动端显示横幅图片来源文本
         },
         text: {
