@@ -59,6 +59,7 @@ export type SiteConfig = {
     anime: boolean; // 追番页面开关
     sponsor: boolean; // 赞助页面开关
     guestbook: boolean; // 留言板页面开关
+    bangumi: boolean
   };
 
   // 文章列表布局配置
@@ -87,6 +88,7 @@ export enum LinkPreset {
   Anime = 4,
   Sponsor = 5,
   Guestbook = 6,
+  Bangumi = 7,
 }
 
 export type NavBarLink = {
@@ -213,7 +215,12 @@ export type BlogPostData = {
 };
 
 export type ExpressiveCodeConfig = {
-  theme: string;
+  /** @deprecated 使用 darkTheme 和 lightTheme 代替 */
+  theme?: string;
+  /** 暗色主题名称（用于暗色模式） */
+  darkTheme: string;
+  /** 亮色主题名称（用于亮色模式） */
+  lightTheme: string;
 };
 
 export type AnnouncementConfig = {
