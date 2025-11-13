@@ -50,6 +50,9 @@ export const siteConfig: SiteConfig = {
   },
   navbarTitle: "Firefly", // 导航栏标题，可以设置为与 title 不同的值，如果不设置则使用 title
 
+  // 站点开始日期，用于统计运行天数
+  siteStartDate: "2025-01-01", // 请修改为你的站点实际开始日期，格式：YYYY-MM-DD
+
   // 追番配置
   bangumi: {
     userId: "1163581", // 在此处设置你的Bangumi用户ID
@@ -76,6 +79,7 @@ export const siteConfig: SiteConfig = {
   // 文章列表布局配置
   postListLayout: {
     // 默认布局模式："list" 列表模式（单列布局），"grid" 网格模式（双列布局）
+    // 如果sidebarConfig.ts中侧边栏配置启用了"both"双侧边栏，则无法使用文章列表"grid"网格（双列）布局
     defaultMode: "list",
     // 是否允许用户切换布局
     allowSwitch: true,
@@ -84,7 +88,7 @@ export const siteConfig: SiteConfig = {
   // 分页配置
   pagination: {
     // 每页显示的文章数量
-    postsPerPage: 10,
+    postsPerPage: 8,
   },
 
   backgroundWallpaper: {
