@@ -363,3 +363,36 @@ const transparentClass = shouldEnableTransparency
 {!siteConfig.toc.enable && <div id="toc"></div>}
 </Layout>
 
+<style is:global>
+  /* 网格布局激活时，调整主网格为两列布局 */
+  @media (min-width: 1024px) {
+    #main-grid.grid-layout-active {
+      grid-template-columns: 17.5rem 1fr !important;
+    }
+  }
+  
+  /* 确保在网格模式下右侧边栏完全不占空间 */
+  #main-grid.grid-layout-active #right-sidebar {
+    display: none !important;
+  }
+  
+  /* 在低于1200px时隐藏右侧边栏 */
+  @media (max-width: 1199px) {
+    #right-sidebar {
+      display: none !important;
+    }
+    
+    /* 同时调整网格布局为两列 */
+    #main-grid {
+      grid-template-columns: 17.5rem 1fr !important;
+    }
+  }
+  
+  /* 在1024px-1199px之间，确保平板端也正确显示 */
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    #main-grid {
+      grid-template-columns: 17.5rem 1fr !important;
+    }
+  }
+</style>
+
